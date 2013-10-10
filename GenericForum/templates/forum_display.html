@@ -1,0 +1,16 @@
+{% if errors %}
+    {{ errors }}
+{% endif %}
+
+{% if subforums %}
+    {% for forum in subforums %}
+        <p><a href="{% url 'core.views.forum_display' forum.id %}">{{ forum.title }}</a><br />
+        {{ forum.description }}</p>
+    {% endfor %}
+{% endif %}
+
+{% if posts %}
+    {% for post in posts %}
+        <p><a href="{% url 'core.views.thread_display' post.id %}">{{ post.title }}</a> by {{ post.author }}</p>
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,15 @@
+{% if errors %}
+    {{ errors }}
+{% endif %}
+
+{% if thread %}
+    {{ thread.title }} by {{ thread.author }}<br>
+    {{ thread.post }}<br><br>
+{% endif %}
+
+{% if posts %}
+    {% for post in posts %}
+        {{ post.title }} by {{ post.author }}<br>
+        {{ post.post }}<br><br>
+    {% endfor %}
+{% endif %}
