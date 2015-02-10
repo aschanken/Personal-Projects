@@ -1,0 +1,4 @@
+{% for forum in forums %}
+    <p><a href="{% url 'core.views.forum_display' forum.id %}">{{ forum.title }}</a><br />
+    {{ forum.description }}</p>
+{% endfor %}
